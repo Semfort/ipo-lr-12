@@ -1,5 +1,9 @@
 import uuid
+<<<<<<< HEAD
 from .client import Client
+=======
+from transport import Client
+>>>>>>> parent of b05519b (add modules in gui)
 
 class Vehicle:
     def __init__(self, capacity):

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from .client import Client
 from .vehicle import Vehicle
+=======
+from transport import Client
+from transport import Vehicle
+>>>>>>> parent of b05519b (add modules in gui)
 
 class TransportCompany:
     def __init__(self, name):
