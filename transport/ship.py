@@ -1,5 +1,4 @@
-from vehicle import Vehicle
-
+from .vehicle import Vehicle
 
 class Ship(Vehicle):
     def __init__(self, capacity, name):

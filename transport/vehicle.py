@@ -1,5 +1,5 @@
 import uuid
-from client import Client
+from .client import Client
 
 class Vehicle:
     def __init__(self, capacity):

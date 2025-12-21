@@ -1,0 +1,28 @@
+{
+    "clients": [
+        {
+            "name": "Loel",
+            "cargo_weight": 123.0,
+            "is_vip": true
+        },
+        {
+            "name": "Lox",
+            "cargo_weight": 12.0,
+            "is_vip": false
+        }
+    ],
+    "vehicles": [
+        {
+            "vehicle_id": "fc8654d6-545c-416c-a18f-f0c9be831712",
+            "type": "Truck",
+            "capacity": 1234.0,
+            "current_load": 123.0
+        },
+        {
+            "vehicle_id": "3db6dafc-69ed-4d3c-8820-ea5f1689b869",
+            "type": "Ship",
+            "capacity": 12.0,
+            "current_load": 12.0
+        }
+    ]
+}

@@ -1,5 +1,5 @@
-from client import Client
-from vehicle import Vehicle
+from .client import Client
+from .vehicle import Vehicle
 
 class TransportCompany:
     def __init__(self, name):

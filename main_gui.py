@@ -8,7 +8,6 @@ from PyQt6.QtWidgets import QTableWidgetItem, QApplication, QWidget, QPushButton
 from PyQt6.QtGui import QKeyEvent, QShowEvent
 from PyQt6.QtCore import Qt, pyqtSignal
 from transport import Ship, Truck, TransportCompany, Client
-#import transport as tr
 import json
 
 class MainWindow(QMainWindow):
@@ -29,7 +28,7 @@ class MainWindow(QMainWindow):
         self.aw_window = AboutWindow()
         
         self.setWindowTitle(self.company.name)
-        self.setFixedSize(1100, 700)
+        self.setFixedSize(1050, 750)
 
         central = QWidget()
         self.setCentralWidget(central)
@@ -38,12 +37,12 @@ class MainWindow(QMainWindow):
         label.setGeometry(50, 55, 200, 25)
 
         self.combo = QComboBox(central)
-        self.combo.setGeometry(50, 80, 140, 35)
+        self.combo.setGeometry(50, 80, 180, 40)
         self.combo.addItems(["Клиенты", "Транспорт"])
         self.combo.currentTextChanged.connect(self.on_combo_changed)
 
         btn_delete = QPushButton("Удалить элемент", central)
-        btn_delete.setGeometry(50, 125, 140, 40)
+        btn_delete.setGeometry(50, 125, 180, 40)
         btn_delete.clicked.connect(self.delete_selected_row)
 
         for y in [170, 300, 488]:
@@ -56,31 +55,31 @@ class MainWindow(QMainWindow):
         line_v.setGeometry(240, 25, 2, 630)
 
         btn1 = QPushButton("Добавить клиента", central)
-        btn1.setGeometry(50, 200, 140, 40)
+        btn1.setGeometry(50, 200, 180, 40)
         btn1.clicked.connect(self.open_add_client)
 
         btn2 = QPushButton("Изменить клиента", central)
-        btn2.setGeometry(50, 250, 140, 40)
+        btn2.setGeometry(50, 250, 180, 40)
         btn2.clicked.connect(self.open_change_client)
 
         btn3 = QPushButton("Добавить транспорт", central)
-        btn3.setGeometry(50, 340, 140, 40)
+        btn3.setGeometry(50, 340, 180, 40)
         btn3.clicked.connect(self.open_add_vehicle)
 
         btn4 = QPushButton("Изменить транспорт", central)
-        btn4.setGeometry(50, 390, 140, 40)
+        btn4.setGeometry(50, 390, 180, 40)
         btn4.clicked.connect(self.open_change_vehicle)
 
-        btn5 = QPushButton("Распределить грузы", central)
-        btn5.setGeometry(50, 440, 140, 40)
+        btn5 = QPushButton("Распределение грузов", central)
+        btn5.setGeometry(50, 440, 180, 40)
         btn5.clicked.connect(self.optimize_distribution)
 
         btn6 = QPushButton("Экспорт результата", central)
-        btn6.setGeometry(50, 525, 140, 40)
+        btn6.setGeometry(50, 525, 180, 40)
         btn6.clicked.connect(self.export_to_json)
 
         btn7 = QPushButton("О программе", central)
-        btn7.setGeometry(50, 575, 140, 40)
+        btn7.setGeometry(50, 575, 180, 40)
         btn7.clicked.connect(self.open_about_program)
 
         self.status_bar = QStatusBar()
