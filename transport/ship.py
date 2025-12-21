@@ -1,4 +1,4 @@
-from transport import Vehicle
+from vehicle import Vehicle
 
 
 class Ship(Vehicle):
